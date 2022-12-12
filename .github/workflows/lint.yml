@@ -1,0 +1,19 @@
+name: ⬣ Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint:
+    name: ⬣ Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬣ Lint
+        uses: mcanshbot/shared-workflows/.github/workflows/lint.yml@main
+        with: 
+          package-manager: pnpm
+          package-manager-version: 7
+          node-version: 18
